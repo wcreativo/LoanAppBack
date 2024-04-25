@@ -1,0 +1,4 @@
+Flask
+Werkzeug
+markupsafe==2.0.1
+Flask-Pydantic==0.12.0
