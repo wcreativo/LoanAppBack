@@ -162,7 +162,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lendingFront/dev/1714067508075-2024-04-25T17:51:48.075Z/lendingFront.zip"
+          "S3Key": "serverless/lendingFront/dev/1714075286476-2024-04-25T20:01:26.476Z/lendingFront.zip"
         },
         "Handler": "wsgi_handler.handler",
         "Runtime": "python3.11",
@@ -180,14 +180,14 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersiondaZAK0XL0Wbv74tX81bPoeIuQJyuh03kNQM6IfyqG3w": {
+    "ApiLambdaVersionoeAS1MB9nRVxlggUG0LDDRbOHk6kCECn2RJaOhKZMtM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "bXULXIU6am9BRBdgzlN2zcdnL/waxbw8RpWRLBmAGkQ="
+        "CodeSha256": "7P1ZqmITHzqQyb9cFwyUiT6JDcQfHP6ZTBIYUipFZ1g="
       }
     },
     "HttpApi": {
@@ -298,7 +298,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersiondaZAK0XL0Wbv74tX81bPoeIuQJyuh03kNQM6IfyqG3w"
+        "Ref": "ApiLambdaVersionoeAS1MB9nRVxlggUG0LDDRbOHk6kCECn2RJaOhKZMtM"
       },
       "Export": {
         "Name": "sls-lendingFront-dev-ApiLambdaFunctionQualifiedArn"
