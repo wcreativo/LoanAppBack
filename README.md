@@ -8,7 +8,7 @@ language: Python
 priority: 2
 -->
 
-# LoanAPP - Serverless Python Flask API on AWS
+# LoanApp - Serverless Python Flask API on AWS
 
 This document demostrates how to develop and deploy LoanApp project, running on AWS Lambda using Serverless Framework.
 
@@ -48,16 +48,36 @@ serverless deploy
 
 ### Local development
 
-Thanks to capabilities of `serverless-wsgi`, it is also possible to run your application locally, however, in order to do that, you will need to first install `werkzeug`, `boto3` dependencies, as well as all other dependencies listed in `requirements.txt`. It is recommended to use a dedicated virtual environment for that purpose. You can install all needed dependencies with the following commands:
+```bash
+python3.9 -m venv ./venv
+source ./venv/bin/activate
+```
 
 ```bash
-pip install werkzeug boto3
 pip install -r requirements.txt
 flask run
 ```
 
-### Tech Stack
+### Endpoint
 
-- TDD
-- Flask
-- Pydantic
+Post
+```bash
+https://6heqmtw8dg.execute-api.us-east-2.amazonaws.com/loan/
+```
+
+Request example:
+```bash
+{
+    "amount": 5000,
+    "tax_id": "5654-565",
+    "business_name": "Embyter"
+}
+```
+
+### Testing
+
+```bash
+python3.9 -m venv ./venv
+pip install -r requirements.txt
+pytest
+```
